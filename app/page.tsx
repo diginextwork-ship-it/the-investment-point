@@ -2,6 +2,7 @@
 
 import TopStrip from '@/components/TopStrip';
 import Navigation from '@/components/Navigation';
+import FooterMap from '@/components/FooterMap';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Star, Wifi } from 'lucide-react';
@@ -62,19 +63,19 @@ export default function Home() {
               className={`space-y-8 transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             >
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-700">
-                <span className="h-2.5 w-2.5 rounded-full bg-teal-600" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#0BA6DF]" />
                 Trusted by 50+ investors
               </div>
 
               <div className="space-y-3">
                 <h1 className="text-5xl font-bold leading-tight text-slate-900 md:text-6xl">
                   <span className="block">Invest with</span>
-                  <span className="block text-teal-600">Confidence</span>
+                  <span className="block text-[#0BA6DF]">Confidence</span>
                 </h1>
-                <div className="h-2 w-28 rounded-full border-l-8 border-teal-600 bg-teal-100" />
+                <div className="h-2 w-28 rounded-full border-l-8 border-[#0BA6DF] bg-[#0BA6DF]/15" />
               </div>
 
-              <p className="border-l-4 border-teal-600 pl-4 text-lg leading-relaxed text-slate-600">
+              <p className="border-l-4 border-[#0BA6DF] pl-4 text-lg leading-relaxed text-slate-600">
                 Secure your future with The Investment Point. We blend data-driven strategies
                 with ethical transparency to engineer sustainable wealth growth for you.
               </p>
@@ -82,13 +83,13 @@ export default function Home() {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-teal-600 px-8 py-3.5 font-semibold text-white transition-smooth hover:bg-teal-700"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0BA6DF] px-8 py-3.5 font-semibold text-white transition-smooth hover:bg-[#0BA6DF]/90"
                 >
                   Start Investing -&gt;
                 </Link>
                 <Link
                   href="/services/mutual-fund"
-                  className="inline-flex items-center justify-center rounded-full border border-teal-600 px-8 py-3.5 font-semibold text-teal-600 transition-smooth hover:bg-teal-50"
+                  className="inline-flex items-center justify-center rounded-full border border-[#0BA6DF] px-8 py-3.5 font-semibold text-[#0BA6DF] transition-smooth hover:bg-[#0BA6DF]/10"
                 >
                   View Strategies
                 </Link>
@@ -106,10 +107,10 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="flex items-center gap-2 text-slate-900">
-                  <span className="text-lg font-bold text-teal-600">+500</span>
-                  <span className="font-bold">Client Satisfaction</span>
+                  <span className="text-lg font-bold text-[#0BA6DF]">500+</span>
+                  <span className="font-bold">Clients</span>
                 </div>
-                <div className="flex items-center gap-1 text-teal-600">
+                <div className="flex items-center gap-1 text-[#0BA6DF]">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
@@ -141,7 +142,7 @@ export default function Home() {
                   >
                     <div>
                       <div className="mb-8 flex items-start justify-between">
-                        <div className="h-[56px] w-[76px] rounded-[18px] bg-teal-600/95" />
+                        <div className="h-[56px] w-[76px] rounded-[18px] bg-[#0BA6DF]/95" />
                         <span className="pt-1 text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
                           PREMIUM
                         </span>
@@ -178,13 +179,13 @@ export default function Home() {
                     <div className="flex items-end justify-between gap-4">
                       <div>
                         <p className="text-sm text-slate-500">Growth</p>
-                        <p className="mt-2 text-[18px] font-bold text-teal-600">+24.5%</p>
+                        <p className="mt-2 text-[18px] font-bold text-[#0BA6DF]">+24.5%</p>
                       </div>
                       <div className="flex h-[48px] items-end gap-[8px]">
                         {[16, 32, 20, 44, 36].map((h, i) => (
                           <div
                             key={i}
-                            className="w-[12px] rounded-full bg-teal-600"
+                            className="w-[12px] rounded-full bg-[#0BA6DF]"
                             style={{ height: `${h}px` }}
                           />
                         ))}
@@ -194,7 +195,7 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="absolute right-[80px] top-[-30px] z-40 flex h-16 w-16 items-center justify-center rounded-full bg-teal-600 text-3xl font-bold text-white shadow-xl"
+                  className="absolute right-[80px] top-[-30px] z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#0BA6DF] text-3xl font-bold text-white shadow-xl"
                   style={{
                     animation: 'floatC var(--float-c,7s) ease-in-out infinite',
                     transform: 'translateZ(50px)',
@@ -245,15 +246,15 @@ export default function Home() {
                 href={`/services/${service.title.toLowerCase().replace(' ', '-')}`}
                 className="group"
               >
-                <div className="h-full rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 transition-smooth hover:border-teal-400 hover:shadow-xl">
+                <div className="h-full rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 transition-smooth hover:border-[#0BA6DF] hover:shadow-xl">
                   <div className="mb-4 inline-block text-5xl transition-smooth group-hover:scale-125">
                     {service.icon}
                   </div>
-                  <h3 className="mb-3 text-2xl font-bold text-slate-900 transition-smooth group-hover:text-teal-600">
+                  <h3 className="mb-3 text-2xl font-bold text-slate-900 transition-smooth group-hover:text-[#0BA6DF]">
                     {service.title}
                   </h3>
                   <p className="mb-4 leading-relaxed text-slate-600">{service.desc}</p>
-                  <div className="font-semibold text-teal-600 transition-smooth group-hover:translate-x-2">
+                  <div className="font-semibold text-[#0BA6DF] transition-smooth group-hover:translate-x-2">
                     Explore -&gt;
                   </div>
                 </div>
@@ -263,16 +264,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-teal-600 to-teal-500 px-4 py-20 text-white">
+      <section className="bg-[#0BA6DF] px-4 py-20 text-white">
         <div className="mx-auto max-w-4xl space-y-8 text-center">
           <h2 className="text-4xl font-bold md:text-5xl">Ready to Start Your Journey?</h2>
-          <p className="text-xl text-teal-50">
+          <p className="text-xl text-white/90">
             Get in touch with our experts today and take the first step towards financial
             success.
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-lg bg-white px-10 py-4 font-semibold text-teal-600 shadow-xl transition-smooth hover:bg-slate-50 hover:shadow-2xl active:scale-95"
+            className="inline-block rounded-lg bg-white px-10 py-4 font-semibold text-[#0BA6DF] shadow-xl transition-smooth hover:bg-slate-50 hover:shadow-2xl active:scale-95"
           >
             Contact Us Now
           </Link>
@@ -280,77 +281,50 @@ export default function Home() {
       </section>
 
       <footer className="bg-slate-900 px-4 py-12 text-slate-100">
-        <div className="mx-auto mb-8 grid max-w-7xl gap-8 md:grid-cols-4">
-          <div>
-            <h3 className="mb-4 text-xl font-bold text-teal-400">The Investment Point</h3>
-            <p className="text-sm text-slate-400">
-              Your trusted partner in financial growth and security.
-            </p>
-          </div>
-          <div>
-            <h4 className="mb-4 font-semibold text-teal-400">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/about" className="transition-smooth hover:text-teal-400">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/mutual-fund"
-                  className="transition-smooth hover:text-teal-400"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="transition-smooth hover:text-teal-400">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 font-semibold text-teal-400">Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/services/mutual-fund"
-                  className="transition-smooth hover:text-teal-400"
-                >
-                  Mutual Funds
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/sip" className="transition-smooth hover:text-teal-400">
-                  SIP
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/health-insurance"
-                  className="transition-smooth hover:text-teal-400"
-                >
-                  Health Insurance
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 font-semibold text-teal-400">Follow Us</h4>
-            <div className="flex gap-4">
-              <a href="#" className="transition-smooth hover:text-teal-400">
-                Twitter
-              </a>
-              <a href="#" className="transition-smooth hover:text-teal-400">
-                LinkedIn
-              </a>
-              <a href="#" className="transition-smooth hover:text-teal-400">
-                Facebook
-              </a>
+        {/* Top: footer info (left) + map (right) */}
+        <div className="mx-auto max-w-7xl flex flex-col md:flex-row gap-10 mb-10">
+
+          {/* Left: footer nav columns */}
+          <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8 mt-6">
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-[#0BA6DF]">The Investment Point</h3>
+              <p className="text-sm text-slate-400">
+                Your trusted partner in financial growth and security.
+              </p>
+            </div>
+            <div>
+              <h4 className="mb-4 font-semibold text-[#0BA6DF]">Quick Links</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/about" className="transition-smooth hover:text-[#0BA6DF]">About Us</Link></li>
+                <li><Link href="/services/mutual-fund" className="transition-smooth hover:text-[#0BA6DF]">Services</Link></li>
+                <li><Link href="/contact" className="transition-smooth hover:text-[#0BA6DF]">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 font-semibold text-[#0BA6DF]">Services</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/services/mutual-fund" className="transition-smooth hover:text-[#0BA6DF]">Mutual Funds</Link></li>
+                <li><Link href="/services/sip" className="transition-smooth hover:text-[#0BA6DF]">SIP</Link></li>
+                <li><Link href="/services/health-insurance" className="transition-smooth hover:text-[#0BA6DF]">Health Insurance</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 font-semibold text-[#0BA6DF]">Follow Us</h4>
+              <div className="flex flex-col gap-2 text-sm">
+                <a href="#" className="transition-smooth hover:text-[#0BA6DF]">Twitter</a>
+                <a href="#" className="transition-smooth hover:text-[#0BA6DF]">LinkedIn</a>
+                <a href="#" className="transition-smooth hover:text-[#0BA6DF]">Facebook</a>
+              </div>
             </div>
           </div>
+
+          {/* Right: map - half width */}
+          <div className="w-full md:w-1/2 shrink-0">
+            <h4 className="mb-3 font-semibold text-[#0BA6DF]">Find Us</h4>
+            <FooterMap />
+          </div>
         </div>
+
         <div className="border-t border-slate-700 pt-8">
           <p className="text-center text-sm text-slate-400">
             (c) 2024 The Investment Point. All rights reserved.

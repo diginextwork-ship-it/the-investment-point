@@ -4,10 +4,10 @@ export default function HealthInsurance() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-teal-600 to-teal-500 text-white">
+      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Health Insurance</h1>
-          <p className="text-xl text-teal-50">
+          <p className="text-xl text-white/90">
             Comprehensive health coverage for you and your loved ones
           </p>
         </div>
@@ -26,26 +26,26 @@ export default function HealthInsurance() {
               <p className="text-lg text-slate-600 leading-relaxed">
                 With cashless treatment at networked hospitals and transparent coverage, we make healthcare accessible and affordable for everyone.
               </p>
-              <div className="bg-teal-50 p-6 rounded-lg border border-teal-200">
-                <h3 className="font-semibold text-teal-900 mb-3">Coverage Highlights:</h3>
+              <div className="bg-[#0BA6DF]/10 p-6 rounded-lg border border-[#0BA6DF]/20">
+                <h3 className="font-semibold text-[#0BA6DF] mb-3">Coverage Highlights:</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Cashless Hospitalization
+                    <span className="text-[#0BA6DF]">✓</span> Cashless Hospitalization
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Pre & Post Hospitalization
+                    <span className="text-[#0BA6DF]">✓</span> Pre & Post Hospitalization
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Maternity Coverage
+                    <span className="text-[#0BA6DF]">✓</span> Maternity Coverage
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Dental & Vision Benefits
+                    <span className="text-[#0BA6DF]">✓</span> Dental & Vision Benefits
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-teal-50 to-white p-8 rounded-xl border border-teal-200 space-y-6">
+            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6">
               <h3 className="text-2xl font-bold text-slate-900">Plan Options</h3>
               {[
                 {
@@ -69,7 +69,7 @@ export default function HealthInsurance() {
                   key={idx}
                   className="pb-4 border-b border-slate-200 last:border-0 group cursor-pointer hover:bg-white p-3 rounded transition-smooth"
                 >
-                  <p className="font-semibold text-slate-900 group-hover:text-teal-600 transition-smooth">
+                  <p className="font-semibold text-slate-900 group-hover:text-[#0BA6DF] transition-smooth">
                     {plan.plan}
                   </p>
                   <p className="text-sm text-slate-600">{plan.desc}</p>
@@ -126,7 +126,7 @@ export default function HealthInsurance() {
                   <ul className="space-y-2">
                     {coverage.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-slate-600">
-                        <span className="w-1.5 h-1.5 bg-teal-600 rounded-full"></span>
+                        <span className="w-1.5 h-1.5 bg-[#0BA6DF] rounded-full"></span>
                         {item}
                       </li>
                     ))}
@@ -137,7 +137,7 @@ export default function HealthInsurance() {
           </div>
 
           {/* Network Hospitals */}
-          <div className="bg-gradient-to-r from-teal-50 to-white p-12 rounded-xl border border-teal-200">
+          <div className="bg-gradient-to-r from-[#0BA6DF]/10 to-white p-12 rounded-xl border border-[#0BA6DF]/20">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Network Hospitals</h2>
             <p className="text-lg text-slate-600 mb-8">
               Access to a nationwide network of 10,000+ cashless hospitals across India
@@ -178,7 +178,7 @@ export default function HealthInsurance() {
             ].map((benefit, idx) => (
               <div
                 key={idx}
-                className="p-8 bg-white rounded-lg border border-slate-200 hover:border-teal-300 hover:shadow-lg transition-smooth text-center"
+                className="p-8 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] hover:shadow-lg transition-smooth text-center"
               >
                 <div className="text-5xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">{benefit.title}</h3>
@@ -188,14 +188,14 @@ export default function HealthInsurance() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 text-white p-12 rounded-xl text-center">
+          <div className="bg-[#0BA6DF] text-white p-12 rounded-xl text-center">
             <h2 className="text-3xl font-bold mb-4">Get Health Insurance Today</h2>
-            <p className="text-lg text-teal-50 mb-8">
+            <p className="text-lg text-white/90 mb-8">
               Protect yourself and your family with comprehensive health coverage
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-teal-600 rounded-lg font-semibold hover:bg-slate-50 transition-smooth"
+              className="inline-block px-8 py-4 bg-white text-[#0BA6DF] rounded-lg font-semibold hover:bg-slate-50 transition-smooth"
             >
               Get a Quote
             </a>
