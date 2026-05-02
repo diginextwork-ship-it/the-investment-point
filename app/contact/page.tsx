@@ -41,26 +41,26 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
+      <section className="px-4 py-12 sm:py-16 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-white/90">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
+          <p className="text-base sm:text-xl text-white/90">
             Get in touch with our expert financial advisors today
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 bg-white">
+      <section className="px-4 py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Form */}
             <div className="space-y-8 animate-fadeIn">
               <div>
-                <h2 className="text-4xl font-bold text-slate-900 mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
                   Get In Touch
                 </h2>
-                <p className="text-lg text-slate-600">
+                <p className="text-base sm:text-lg text-slate-600">
                   Fill out the form below and our team will get back to you
                   shortly with personalized financial solutions.
                 </p>
@@ -145,10 +145,10 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8 animate-slideInRight">
               <div>
-                <h2 className="text-4xl font-bold text-slate-900 mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
                   Contact Information
                 </h2>
-                <p className="text-lg text-slate-600">
+                <p className="text-base sm:text-lg text-slate-600">
                   Reach out to us through any of the following channels.
                   We&apos;re here to help you achieve your financial goals.
                 </p>
@@ -187,12 +187,12 @@ export default function Contact() {
                     className="p-6 bg-gradient-to-br from-[#0BA6DF]/10 to-white rounded-lg border border-[#0BA6DF]/20 hover:shadow-lg transition-smooth"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="text-4xl">{contact.icon}</div>
+                      <div className="shrink-0 text-3xl sm:text-4xl">{contact.icon}</div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-slate-900 mb-1">
                           {contact.title}
                         </h3>
-                        <p className="font-semibold text-[#0BA6DF] mb-1">
+                        <p className="break-words font-semibold text-[#0BA6DF] mb-1">
                           {contact.value}
                         </p>
                         <p className="text-sm text-slate-600">
@@ -207,7 +207,7 @@ export default function Contact() {
               {/* Social Links */}
               <div className="pt-6 border-t border-slate-200">
                 <h3 className="font-semibold text-slate-900 mb-4">Follow Us</h3>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
                   {["Twitter", "LinkedIn", "Facebook", "Instagram"].map(
                     (social) => (
                       <a
@@ -227,9 +227,9 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-slate-50">
+      <section className="px-4 py-12 sm:py-16 md:py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
@@ -253,7 +253,7 @@ export default function Contact() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] transition-smooth"
+                className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] transition-smooth"
               >
                 <h3 className="font-semibold text-slate-900 mb-2">{item.q}</h3>
                 <p className="text-slate-600">{item.a}</p>

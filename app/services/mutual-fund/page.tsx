@@ -4,26 +4,26 @@ export default function MutualFund() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
+      <section className="px-4 py-12 sm:py-16 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Mutual Funds</h1>
-          <p className="text-xl text-white/90">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">Mutual Funds</h1>
+          <p className="text-base sm:text-xl text-white/90">
             Grow your wealth with professionally managed mutual fund portfolios
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto space-y-16">
+      <section className="px-4 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto space-y-10 sm:space-y-16">
           {/* Overview */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8 md:gap-12 items-center">
             <div className="space-y-6 animate-fadeIn">
-              <h2 className="text-4xl font-bold text-slate-900">What are Mutual Funds?</h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">What are Mutual Funds?</h2>
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Mutual funds pool money from multiple investors to create a diversified portfolio of stocks, bonds, or other securities. Our expert fund managers carefully select investments to maximize returns while managing risk according to your financial goals.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Whether you&apos;re a beginner or an experienced investor, our curated selection of mutual funds offers options for every risk appetite and investment horizon.
               </p>
               <div className="bg-[#0BA6DF]/10 p-6 rounded-lg border border-[#0BA6DF]/20">
@@ -45,7 +45,7 @@ export default function MutualFund() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6">
+            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-5 sm:p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6">
               <h3 className="text-2xl font-bold text-slate-900">Fund Categories</h3>
               {[
                 {
@@ -79,9 +79,9 @@ export default function MutualFund() {
           </div>
 
           {/* Features Grid */}
-          <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-xl border border-slate-200">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Why Choose Our Mutual Funds?</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-slate-50 to-white p-6 sm:p-8 md:p-12 rounded-xl border border-slate-200">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Why Choose Our Mutual Funds?</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   icon: '📊',
@@ -116,7 +116,7 @@ export default function MutualFund() {
               ].map((feature, idx) => (
                 <div
                   key={idx}
-                  className="p-6 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] hover:shadow-lg transition-smooth text-center"
+                  className="p-5 sm:p-6 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] hover:shadow-lg transition-smooth text-center"
                 >
                   <div className="text-4xl mb-3">{feature.icon}</div>
                   <h3 className="font-semibold text-slate-900 mb-2">{feature.title}</h3>
@@ -127,8 +127,8 @@ export default function MutualFund() {
           </div>
 
           {/* CTA */}
-          <div className="bg-[#0BA6DF] text-white p-12 rounded-xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Start Investing Today</h2>
+          <div className="bg-[#0BA6DF] text-white p-6 sm:p-8 md:p-12 rounded-xl text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Start Investing Today</h2>
             <p className="text-lg text-white/90 mb-8">
               Let our experts help you build a mutual fund portfolio tailored to your goals
             </p>

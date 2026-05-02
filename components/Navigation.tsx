@@ -24,57 +24,57 @@ const Navigation = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between gap-8">
+    <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 md:h-[72px] md:gap-8">
 
         {/* LEFT: Logo + Brand Name */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="shrink-0 h-[56px] w-auto flex items-center">
+        <Link href="/" className="flex min-w-0 shrink items-center gap-2 sm:gap-3">
+          <div className="flex h-12 shrink-0 items-center md:h-[56px]">
             <Image
               src="/the_investment_point.svg"
               alt="The Investment Point logo"
               width={56}
               height={56}
-              className="h-[160px] w-auto object-contain shrink-0"
+              className="h-20 w-auto shrink-0 object-contain sm:h-24 md:h-[160px]"
               priority
             />
           </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-[1.25rem] font-extrabold text-[#0BA6DF] tracking-tight whitespace-nowrap">
+          <div className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate text-[0.98rem] font-extrabold tracking-tight text-[#0BA6DF] sm:text-[1.25rem]">
               The Investment Point
             </span>
-            <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-slate-400 whitespace-nowrap">
+            <span className="truncate text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-slate-400 sm:text-[0.65rem] sm:tracking-[0.22em]">
               Wealth Planning
             </span>
           </div>
         </Link>
 
         {/* CENTER + RIGHT: Nav links + CTA (desktop) */}
-        <div className="hidden md:flex items-center gap-8 ml-auto">
+        <div className="ml-auto hidden items-center gap-5 lg:flex xl:gap-8">
 
           {navLinks.slice(0, 2).map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="relative text-sm font-semibold text-slate-700 hover:text-[#0BA6DF] transition-colors duration-200 group"
+              className="group relative text-sm font-semibold text-slate-700 transition-colors duration-150 hover:text-[#0BA6DF]"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#0BA6DF] transition-all duration-300 group-hover:w-full rounded-full" />
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-[#0BA6DF] transition-all duration-150 group-hover:w-full" />
             </Link>
           ))}
 
           {/* Services Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-sm font-semibold text-slate-700 hover:text-[#0BA6DF] transition-colors duration-200">
+            <button className="flex items-center gap-1 text-sm font-semibold text-slate-700 transition-colors duration-150 hover:text-[#0BA6DF]">
               Services
-              <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+              <ChevronDown className="h-4 w-4 transition-transform duration-150 group-hover:rotate-180" />
             </button>
-            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white rounded-2xl border border-slate-100 shadow-xl p-2 transition-all duration-200 z-50">
+            <div className="invisible absolute left-1/2 top-full z-50 mt-3 w-52 -translate-x-1/2 rounded-xl border border-slate-100 bg-white p-2 opacity-0 shadow-xl transition-all duration-150 group-hover:visible group-hover:opacity-100">
               {serviceLinks.map((service) => (
                 <Link
                   key={service.name}
                   href={service.href}
-                  className="block px-4 py-2.5 text-sm font-medium text-slate-700 rounded-xl hover:bg-[#0BA6DF]/10 hover:text-[#0BA6DF] transition-colors duration-150"
+                  className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors duration-150 hover:bg-[#0BA6DF]/10 hover:text-[#0BA6DF]"
                 >
                   {service.name}
                 </Link>
@@ -86,17 +86,17 @@ const Navigation = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="relative text-sm font-semibold text-slate-700 hover:text-[#0BA6DF] transition-colors duration-200 group"
+              className="group relative text-sm font-semibold text-slate-700 transition-colors duration-150 hover:text-[#0BA6DF]"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#0BA6DF] transition-all duration-300 group-hover:w-full rounded-full" />
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-[#0BA6DF] transition-all duration-150 group-hover:w-full" />
             </Link>
           ))}
 
           {/* CTA Button */}
           <Link
             href="/contact"
-            className="ml-2 px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#0BA6DF] to-[#0880b5] hover:from-[#0880b5] hover:to-[#0BA6DF] transition-all duration-300 shadow-md hover:shadow-lg"
+            className="ml-2 rounded-full bg-gradient-to-r from-[#0BA6DF] to-[#0880b5] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-150 hover:from-[#0880b5] hover:to-[#0BA6DF] hover:shadow-lg"
           >
             Get Started
           </Link>
@@ -104,7 +104,7 @@ const Navigation = () => {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden ml-auto p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          className="ml-auto rounded-lg p-2 transition-colors hover:bg-slate-100 lg:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -114,7 +114,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-100 bg-white px-6 py-4 space-y-3">
+        <div className="space-y-3 border-t border-slate-100 bg-white px-4 py-4 lg:hidden">
           <Link href="/" className="block text-sm font-semibold text-slate-700 hover:text-[#0BA6DF] py-1" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           <Link href="/about" className="block text-sm font-semibold text-slate-700 hover:text-[#0BA6DF] py-1" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
 
@@ -124,7 +124,7 @@ const Navigation = () => {
               onClick={() => setServicesOpen(!servicesOpen)}
             >
               Services
-              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`h-4 w-4 transition-transform duration-150 ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             {servicesOpen && (
               <div className="pl-4 mt-1 space-y-1">

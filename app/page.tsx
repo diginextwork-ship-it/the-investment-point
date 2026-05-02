@@ -10,7 +10,7 @@ import { Star, Wifi } from 'lucide-react';
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const heroRef = useRef<HTMLElement | null>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0, transition: 'transform 0.6s ease-out' });
+  const [tilt, setTilt] = useState({ x: 0, y: 0, transition: 'transform 0.2s ease-out' });
 
   useEffect(() => {
     setIsLoaded(true);
@@ -24,12 +24,12 @@ export default function Home() {
     setTilt({
       x: -(y / rect.height) * 8,
       y: (x / rect.width) * 8,
-      transition: 'transform 0.1s ease-out',
+      transition: 'transform 0.08s ease-out',
     });
   };
 
   const handleHeroMouseLeave = () => {
-    setTilt({ x: 0, y: 0, transition: 'transform 0.6s ease-out' });
+    setTilt({ x: 0, y: 0, transition: 'transform 0.2s ease-out' });
   };
 
   return (
@@ -39,15 +39,15 @@ export default function Home() {
       <style>{`
         @keyframes floatA {
           0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          50% { transform: translateY(-10px); }
         }
         @keyframes floatB {
           0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-12px); }
+          50% { transform: translateY(-8px); }
         }
         @keyframes floatC {
           0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-16px); }
+          50% { transform: translateY(-8px); }
         }
       `}</style>
 
@@ -55,12 +55,12 @@ export default function Home() {
         ref={heroRef}
         onMouseMove={handleHeroMouseMove}
         onMouseLeave={handleHeroMouseLeave}
-        className="relative bg-gradient-to-br from-white via-slate-50 to-white px-4 py-20 md:py-28"
+        className="relative bg-gradient-to-br from-white via-slate-50 to-white px-4 py-12 sm:py-16 md:py-24"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
+          <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-20">
             <div
-              className={`space-y-8 transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+              className={`space-y-6 transition-opacity duration-200 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             >
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-700">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#0BA6DF]" />
@@ -68,14 +68,14 @@ export default function Home() {
               </div>
 
               <div className="space-y-3">
-                <h1 className="text-5xl font-bold leading-tight text-slate-900 md:text-6xl">
+                <h1 className="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl md:text-6xl">
                   <span className="block">Invest with</span>
                   <span className="block text-[#0BA6DF]">Confidence</span>
                 </h1>
                 <div className="h-2 w-28 rounded-full border-l-8 border-[#0BA6DF] bg-[#0BA6DF]/15" />
               </div>
 
-              <p className="border-l-4 border-[#0BA6DF] pl-4 text-lg leading-relaxed text-slate-600">
+              <p className="border-l-4 border-[#0BA6DF] pl-4 text-base leading-relaxed text-slate-600 sm:text-lg">
                 Secure your future with The Investment Point. We blend data-driven strategies
                 with ethical transparency to engineer sustainable wealth growth for you.
               </p>
@@ -118,12 +118,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center py-12 md:justify-end">
+            <div className="relative flex items-center justify-center py-4 sm:py-8 md:justify-end">
               <div
-                className="relative [--float-a:6s] [--float-b:8s] [--float-c:7s]"
+                className="relative w-full max-w-[500px] [--float-a:3s] [--float-b:3.6s] [--float-c:3.2s]"
                 style={{
-                  width: '500px',
-                  height: '380px',
+                  aspectRatio: '500 / 380',
                   transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
                   transition: tilt.transition,
                   transformStyle: 'preserve-3d',
@@ -131,10 +130,10 @@ export default function Home() {
               >
                 <div
                   className="relative z-20"
-                  style={{ animation: 'floatA var(--float-a,6s) ease-in-out infinite' }}
+                  style={{ animation: 'floatA var(--float-a,3s) ease-in-out infinite' }}
                 >
                   <div
-                    className="flex h-[240px] w-[360px] flex-col justify-between rounded-[28px] border border-slate-200/80 bg-white px-8 py-6 shadow-[0_24px_50px_rgba(15,23,42,0.12)]"
+                    className="flex aspect-[3/2] w-[72%] min-w-[250px] max-w-[360px] flex-col justify-between rounded-2xl border border-slate-200/80 bg-white px-5 py-5 shadow-[0_18px_34px_rgba(15,23,42,0.12)] sm:px-8 sm:py-6"
                     style={{
                       transform: 'translateZ(24px) rotateX(5deg) rotateY(-10deg)',
                       transformStyle: 'preserve-3d',
@@ -147,7 +146,7 @@ export default function Home() {
                           PREMIUM
                         </span>
                       </div>
-                      <div className="text-[22px] font-semibold tracking-[0.38em] text-slate-900">
+                      <div className="text-base font-semibold tracking-[0.24em] text-slate-900 sm:text-[22px] sm:tracking-[0.38em]">
                         **** **** 4582
                       </div>
                     </div>
@@ -166,11 +165,11 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="absolute bottom-[20px] left-[40px] z-30"
-                  style={{ animation: 'floatB var(--float-b,8s) ease-in-out infinite' }}
+                  className="absolute bottom-[5%] left-[6%] z-30"
+                  style={{ animation: 'floatB var(--float-b,3.6s) ease-in-out infinite' }}
                 >
                   <div
-                    className="w-[200px] rounded-[20px] border border-slate-200/80 bg-white px-6 py-5 shadow-[0_18px_36px_rgba(15,23,42,0.12)]"
+                    className="w-[170px] rounded-2xl border border-slate-200/80 bg-white px-4 py-4 shadow-[0_14px_28px_rgba(15,23,42,0.12)] sm:w-[200px] sm:px-6 sm:py-5"
                     style={{
                       transform: 'translateZ(46px) rotateX(4deg) rotateY(-8deg)',
                       transformStyle: 'preserve-3d',
@@ -195,9 +194,9 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="absolute right-[80px] top-[-30px] z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#0BA6DF] text-3xl font-bold text-white shadow-xl"
+                  className="absolute right-[10%] top-[-4%] z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#0BA6DF] text-xl font-bold text-white shadow-xl sm:h-16 sm:w-16 sm:text-3xl"
                   style={{
-                    animation: 'floatC var(--float-c,7s) ease-in-out infinite',
+                    animation: 'floatC var(--float-c,3.2s) ease-in-out infinite',
                     transform: 'translateZ(50px)',
                   }}
                 >
@@ -209,11 +208,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-20">
+      <section className="bg-white px-4 py-12 sm:py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-bold text-slate-900">Our Services</h2>
-            <p className="text-xl text-slate-600">
+          <div className="mb-10 text-center sm:mb-16">
+            <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl">Our Services</h2>
+            <p className="text-base text-slate-600 sm:text-xl">
               Comprehensive financial solutions tailored for your needs
             </p>
           </div>
@@ -247,7 +246,7 @@ export default function Home() {
                 className="group"
               >
                 <div className="h-full rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-8 transition-smooth hover:border-[#0BA6DF] hover:shadow-xl">
-                  <div className="mb-4 inline-block text-5xl transition-smooth group-hover:scale-125">
+                  <div className="mb-4 inline-block text-4xl transition-smooth group-hover:scale-110 sm:text-5xl">
                     {service.icon}
                   </div>
                   <h3 className="mb-3 text-2xl font-bold text-slate-900 transition-smooth group-hover:text-[#0BA6DF]">
@@ -264,10 +263,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#0BA6DF] px-4 py-20 text-white">
+      <section className="bg-[#0BA6DF] px-4 py-12 text-white sm:py-16 md:py-20">
         <div className="mx-auto max-w-4xl space-y-8 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">Ready to Start Your Journey?</h2>
-          <p className="text-xl text-white/90">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Ready to Start Your Journey?</h2>
+          <p className="text-base text-white/90 sm:text-xl">
             Get in touch with our experts today and take the first step towards financial
             success.
           </p>
@@ -282,10 +281,10 @@ export default function Home() {
 
       <footer className="bg-slate-900 px-4 py-12 text-slate-100">
         {/* Top: footer info (left) + map (right) */}
-        <div className="mx-auto max-w-7xl flex flex-col md:flex-row gap-10 mb-10">
+        <div className="mx-auto mb-10 flex max-w-7xl flex-col gap-10 md:flex-row">
 
           {/* Left: footer nav columns */}
-          <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8 mt-6">
+          <div className="mt-6 grid flex-1 grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="mb-4 text-xl font-bold text-[#0BA6DF]">The Investment Point</h3>
               <p className="text-sm text-slate-400">

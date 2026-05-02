@@ -4,26 +4,26 @@ export default function LifeInsurance() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
+      <section className="px-4 py-12 sm:py-16 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Life Insurance</h1>
-          <p className="text-xl text-white/90">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">Life Insurance</h1>
+          <p className="text-base sm:text-xl text-white/90">
             Secure your family&apos;s future with reliable life insurance
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto space-y-16">
+      <section className="px-4 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto space-y-10 sm:space-y-16">
           {/* Overview */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8 md:gap-12 items-center">
             <div className="space-y-6 animate-fadeIn">
-              <h2 className="text-4xl font-bold text-slate-900">Protect Your Loved Ones</h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Protect Your Loved Ones</h2>
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Life insurance provides financial security to your family in the event of your untimely demise. Our life insurance plans offer affordable premiums with comprehensive coverage, ensuring your family can maintain their lifestyle.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Whether for children&apos;s education or spouse&apos;s security, our diverse plans cater to every life stage and financial need.
               </p>
               <div className="bg-[#0BA6DF]/10 p-6 rounded-lg border border-[#0BA6DF]/20">
@@ -45,7 +45,7 @@ export default function LifeInsurance() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6">
+            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-5 sm:p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6">
               <h3 className="text-2xl font-bold text-slate-900">Plan Types</h3>
               {[
                 {
@@ -79,7 +79,7 @@ export default function LifeInsurance() {
           </div>
 
           {/* Why Life Insurance */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
             {[
               {
                 icon: '👨‍👩‍👧',
@@ -104,9 +104,9 @@ export default function LifeInsurance() {
             ].map((benefit, idx) => (
               <div
                 key={idx}
-                className="p-8 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] hover:shadow-lg transition-smooth"
+                className="p-5 sm:p-8 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] hover:shadow-lg transition-smooth"
               >
-                <div className="text-5xl mb-4">{benefit.icon}</div>
+                <div className="text-4xl sm:text-5xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">{benefit.title}</h3>
                 <p className="text-slate-600">{benefit.desc}</p>
               </div>
@@ -114,9 +114,9 @@ export default function LifeInsurance() {
           </div>
 
           {/* How It Works */}
-          <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-12 rounded-xl border border-[#0BA6DF]/20">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">How Life Insurance Works</h2>
-            <div className="grid md:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-6 sm:p-8 md:p-12 rounded-xl border border-[#0BA6DF]/20">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">How Life Insurance Works</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   step: 1,
@@ -151,8 +151,8 @@ export default function LifeInsurance() {
           </div>
 
           {/* CTA */}
-          <div className="bg-[#0BA6DF] text-white p-12 rounded-xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Get Life Insurance Today</h2>
+          <div className="bg-[#0BA6DF] text-white p-6 sm:p-8 md:p-12 rounded-xl text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Get Life Insurance Today</h2>
             <p className="text-lg text-white/90 mb-8">
               Protect your family&apos;s future with comprehensive life insurance coverage
             </p>

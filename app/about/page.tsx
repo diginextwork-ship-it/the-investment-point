@@ -4,10 +4,10 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
+      <section className="px-4 py-12 sm:py-16 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-white/90">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">About Us</h1>
+          <p className="text-base sm:text-xl text-white/90">
             Learn about our mission, vision, and commitment to your financial
             success
           </p>
@@ -15,20 +15,20 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto space-y-16">
+      <section className="px-4 py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto space-y-10 sm:space-y-16">
           {/* About Content */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6 animate-fadeIn">
-              <h2 className="text-4xl font-bold text-slate-900">Who We Are</h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Who We Are</h2>
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 The Investment Point is a premier financial advisory firm
                 dedicated to helping individuals and businesses achieve their
                 wealth creation goals through personalized investment strategies
                 and expert guidance. We are your trusted partner in building
                 long-term wealth.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Our team of certified financial advisors and investment
                 professionals are committed to understanding your unique needs
                 and crafting tailored solutions that align with your
@@ -56,7 +56,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6 animate-slideInRight">
+            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-5 sm:p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6 animate-slideInRight">
               <h3 className="text-2xl font-bold text-slate-900">
                 Key Highlights
               </h3>
@@ -71,7 +71,7 @@ export default function About() {
                   className="flex justify-between items-center pb-4 border-b border-slate-200 last:border-0"
                 >
                   <span className="text-slate-600">{item.label}</span>
-                  <div className="text-3xl font-bold text-[#0BA6DF] flex items-center gap-1">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#0BA6DF] flex items-center gap-1">
                     <Counter
                       value={item.value}
                       fontSize={32}
@@ -86,19 +86,19 @@ export default function About() {
           </div>
 
           {/* Founder Section */}
-          <div className="bg-gradient-to-br from-slate-50 to-white p-12 rounded-xl border border-slate-200">
-            <h2 className="text-4xl font-bold text-slate-900 mb-8">
+          <div className="bg-gradient-to-br from-slate-50 to-white p-6 sm:p-8 md:p-12 rounded-xl border border-slate-200">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
               Meet Our Founder
             </h2>
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-[#0BA6DF] mb-2">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#0BA6DF] mb-2">
                     Mr. Varun Barsaiya
                   </h3>
                   <p className="text-xl text-slate-600">Founder & CEO</p>
                 </div>
-                <p className="text-lg text-slate-600 leading-relaxed">
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                   With a passion for financial education and a commitment to
                   excellence, Mr. Varun Barsaiya founded The Investment Point
                   to democratize access to world-class financial services. His
@@ -106,7 +106,7 @@ export default function About() {
                   wealth through informed decision-making and strategic
                   planning.
                 </p>
-                <p className="text-lg text-slate-600 leading-relaxed">
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                   A certified financial advisor with extensive experience in
                   investment management, Mr. Varun Barsaiya has successfully guided
                   clients through various market cycles and helped them achieve
@@ -114,10 +114,10 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg border border-slate-200 space-y-6">
+              <div className="bg-white p-5 sm:p-8 rounded-lg border border-slate-200 space-y-6">
                 <div>
                   <p className="text-slate-600 font-medium mb-2">Phone</p>
-                  <p className="text-2xl font-semibold text-[#0BA6DF]">
+                  <p className="text-xl sm:text-2xl font-semibold text-[#0BA6DF]">
                     +91 9039472693
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function About() {
 
           {/* Mission & Vision */}
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-8 rounded-xl border border-[#0BA6DF]/20">
+            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-5 sm:p-8 rounded-xl border border-[#0BA6DF]/20">
               <h3 className="text-2xl font-bold text-[#0BA6DF] mb-4">
                 Our Mission
               </h3>
@@ -151,7 +151,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-xl border border-slate-200">
+            <div className="bg-gradient-to-br from-slate-50 to-white p-5 sm:p-8 rounded-xl border border-slate-200">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 Our Vision
               </h3>

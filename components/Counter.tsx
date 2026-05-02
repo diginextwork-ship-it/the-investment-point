@@ -17,7 +17,7 @@ export default function Counter({
   fontSize = 28,
   fontWeight = "900",
   textColor = "currentColor",
-  duration = 2.5,
+  duration = 0.8,
 }: CounterProps) {
   const [displayValue, setDisplayValue] = useState(0);
 
@@ -49,7 +49,7 @@ export default function Counter({
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.15 }}
     >
       {displayValue}
     </motion.span>

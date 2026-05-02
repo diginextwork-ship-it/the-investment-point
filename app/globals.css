@@ -120,8 +120,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply overflow-x-hidden scroll-smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply overflow-x-hidden bg-background text-foreground;
+  }
+  img,
+  iframe {
+    @apply max-w-full;
   }
 }
 
@@ -160,18 +167,33 @@
   }
 
   .animate-fadeIn {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.28s ease-out forwards;
   }
 
   .animate-slideInLeft {
-    animation: slideInLeft 0.6s ease-out forwards;
+    animation: slideInLeft 0.28s ease-out forwards;
   }
 
   .animate-slideInRight {
-    animation: slideInRight 0.6s ease-out forwards;
+    animation: slideInRight 0.28s ease-out forwards;
   }
 
   .transition-smooth {
-    @apply transition-all duration-300 ease-in-out;
+    @apply transition-all duration-150 ease-out;
+  }
+
+  .tap-target {
+    @apply min-h-11;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 1ms !important;
+    }
   }
 }
