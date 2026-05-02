@@ -4,10 +4,10 @@ export default function SIP() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-teal-600 to-teal-500 text-white">
+      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Systematic Investment Plan (SIP)</h1>
-          <p className="text-xl text-teal-50">
+          <p className="text-xl text-white/90">
             Invest consistently and build wealth through disciplined investing
           </p>
         </div>
@@ -26,26 +26,26 @@ export default function SIP() {
               <p className="text-lg text-slate-600 leading-relaxed">
                 Whether you invest ₹500 or ₹50,000 monthly, SIP makes it easy to build long-term wealth without the stress of lump sum investments.
               </p>
-              <div className="bg-teal-50 p-6 rounded-lg border border-teal-200">
-                <h3 className="font-semibold text-teal-900 mb-3">SIP Advantages:</h3>
+              <div className="bg-[#0BA6DF]/10 p-6 rounded-lg border border-[#0BA6DF]/20">
+                <h3 className="font-semibold text-[#0BA6DF] mb-3">SIP Advantages:</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Rupee Cost Averaging
+                    <span className="text-[#0BA6DF]">✓</span> Rupee Cost Averaging
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Low Minimum Investment
+                    <span className="text-[#0BA6DF]">✓</span> Low Minimum Investment
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Reduces Emotional Investing
+                    <span className="text-[#0BA6DF]">✓</span> Reduces Emotional Investing
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-teal-600">✓</span> Flexibility & Control
+                    <span className="text-[#0BA6DF]">✓</span> Flexibility & Control
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-teal-50 to-white p-8 rounded-xl border border-teal-200 space-y-6">
+            <div className="bg-gradient-to-br from-[#0BA6DF]/10 to-white p-8 rounded-xl border border-[#0BA6DF]/20 space-y-6">
               <h3 className="text-2xl font-bold text-slate-900">SIP Investment Options</h3>
               {[
                 {
@@ -73,7 +73,7 @@ export default function SIP() {
                   key={idx}
                   className="pb-4 border-b border-slate-200 last:border-0 group cursor-pointer hover:bg-white p-3 rounded transition-smooth"
                 >
-                  <p className="font-semibold text-slate-900 group-hover:text-teal-600 transition-smooth">
+                  <p className="font-semibold text-slate-900 group-hover:text-[#0BA6DF] transition-smooth">
                     {option.amount}
                   </p>
                   <p className="text-sm text-slate-600">{option.duration} - {option.desc}</p>
@@ -109,7 +109,7 @@ export default function SIP() {
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="bg-teal-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                  <div className="bg-[#0BA6DF] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mx-auto mb-4">
                     {item.step}
                   </div>
                   <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
@@ -147,7 +147,7 @@ export default function SIP() {
               ].map((benefit, idx) => (
                 <div
                   key={idx}
-                  className="p-8 bg-white rounded-lg border border-slate-200 hover:border-teal-300 hover:shadow-lg transition-smooth"
+                  className="p-8 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] hover:shadow-lg transition-smooth"
                 >
                   <div className="text-5xl mb-4">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-2">{benefit.title}</h3>
@@ -158,14 +158,14 @@ export default function SIP() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-teal-600 to-teal-500 text-white p-12 rounded-xl text-center">
+          <div className="bg-[#0BA6DF] text-white p-12 rounded-xl text-center">
             <h2 className="text-3xl font-bold mb-4">Start Your SIP Journey</h2>
-            <p className="text-lg text-teal-50 mb-8">
+            <p className="text-lg text-white/90 mb-8">
               Begin your wealth creation with as little as ₹500/month
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-teal-600 rounded-lg font-semibold hover:bg-slate-50 transition-smooth"
+              className="inline-block px-8 py-4 bg-white text-[#0BA6DF] rounded-lg font-semibold hover:bg-slate-50 transition-smooth"
             >
               Start SIP Today
             </a>

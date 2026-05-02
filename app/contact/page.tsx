@@ -41,10 +41,10 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-teal-600 to-teal-500 text-white">
+      <section className="py-16 px-4 bg-[#0BA6DF] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-teal-50">
+          <p className="text-xl text-white/90">
             Get in touch with our expert financial advisors today
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Enter your full name"
                     required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-smooth"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0BA6DF] transition-smooth"
                   />
                 </div>
 
@@ -101,7 +101,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Enter your email address"
                     required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-smooth"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0BA6DF] transition-smooth"
                   />
                 </div>
 
@@ -120,21 +120,21 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Enter your phone number"
                     required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-smooth"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0BA6DF] transition-smooth"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-smooth disabled:opacity-50 active:scale-95 transform"
+                  className="w-full py-3 bg-[#0BA6DF] text-white font-semibold rounded-lg hover:bg-[#0BA6DF]/90 transition-smooth disabled:opacity-50 active:scale-95 transform"
                 >
                   {isLoading ? "Submitting..." : "Submit"}
                 </Button>
 
                 {submitted && (
-                  <div className="p-4 bg-green-50 border border-green-300 rounded-lg animate-fadeIn">
-                    <p className="text-green-700 font-semibold">
+                  <div className="p-4 bg-[#0BA6DF]/10 border border-[#0BA6DF]/30 rounded-lg animate-fadeIn">
+                    <p className="text-[#0BA6DF] font-semibold">
                       Thank you! We&apos;ll get back to you soon.
                     </p>
                   </div>
@@ -166,14 +166,14 @@ export default function Contact() {
                   {
                     icon: "✉️",
                     title: "Email",
-                    value: "Varunb1607@gmail.com",
+                    value: "varunb1607@gmail.com",
                     subtext: "Response within 24 hours",
                   },
                   {
                     icon: "📍",
                     title: "Address",
-                    value: "123 Financial District, Mumbai",
-                    subtext: "Maharashtra, India 400001",
+                    value: "Near Bus Stand Apollo Crossroad Market Shop No 50",
+                    subtext: "Madhya Pradesh, India",
                   },
                   {
                     icon: "⏰",
@@ -184,7 +184,7 @@ export default function Contact() {
                 ].map((contact, idx) => (
                   <div
                     key={idx}
-                    className="p-6 bg-gradient-to-br from-teal-50 to-white rounded-lg border border-teal-200 hover:shadow-lg transition-smooth"
+                    className="p-6 bg-gradient-to-br from-[#0BA6DF]/10 to-white rounded-lg border border-[#0BA6DF]/20 hover:shadow-lg transition-smooth"
                   >
                     <div className="flex items-start gap-4">
                       <div className="text-4xl">{contact.icon}</div>
@@ -192,7 +192,7 @@ export default function Contact() {
                         <h3 className="font-semibold text-slate-900 mb-1">
                           {contact.title}
                         </h3>
-                        <p className="font-semibold text-teal-600 mb-1">
+                        <p className="font-semibold text-[#0BA6DF] mb-1">
                           {contact.value}
                         </p>
                         <p className="text-sm text-slate-600">
@@ -213,7 +213,7 @@ export default function Contact() {
                       <a
                         key={social}
                         href="#"
-                        className="px-4 py-2 border border-slate-300 rounded-lg text-slate-700 hover:text-teal-600 hover:border-teal-600 transition-smooth"
+                        className="px-4 py-2 border border-slate-300 rounded-lg text-slate-700 hover:text-[#0BA6DF] hover:border-[#0BA6DF] transition-smooth"
                       >
                         {social}
                       </a>
@@ -253,7 +253,7 @@ export default function Contact() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 bg-white rounded-lg border border-slate-200 hover:border-teal-300 transition-smooth"
+                className="p-6 bg-white rounded-lg border border-slate-200 hover:border-[#0BA6DF] transition-smooth"
               >
                 <h3 className="font-semibold text-slate-900 mb-2">{item.q}</h3>
                 <p className="text-slate-600">{item.a}</p>
